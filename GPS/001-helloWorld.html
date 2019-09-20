@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="inicial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+    /*
+    Criando estilo visual do mapa
+    */
+      #mapa{
+        height: 100%;
+      }
+      /*
+      Características da janela
+      */
+      html, body{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  <title>Meu primeiro MAP</title>
+</head>
+<body>
+    <div id="mapa">
+    </div>
+        <script>
+          var mapa; // Inicia variável para mapa
+          function initMap(){ //função que inicia mapa
+            mapa = new google.maps.Map(document.getElementById('mapa'), { // Instancia objeto maps da classe da API
+              center: {lat: -22.8467643, lng: -43.286098}, // Seta coordenadas inicial
+              //zoomControl: false, // Desabilita zoom
+              mapTypeId: 'satellite', // mapTypeId: 'satellite', escolhe tipo de mapa
+              zoom: 8 // Configurações de zoom
+            });
+          }
+        </script>
+       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC6dCItLsLNgMg8eCl_rTcREN6sDOGiEg&callback=initMap"
+    async defer></script>
+    <!-- Minha key: AIzaSyCC6dCItLsLNgMg8eCl_rTcREN6sDOGiEg -->
+
+</body>
+</html>
