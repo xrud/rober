@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<script type="text/javascript" src="js/configFire.js"></script>
+<!--Dependencia de autentificação -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+
+	<title></title>
+</head>
+<body>
+	<!-- Formulário -->
+	<div class="container">
+		<input type="email" id="txtEmail" placeholder="email"><br>
+		<input type="password" id="txtPassword" placeholder="senha"><br>
+		<button id="btnLogin" >Login</button><button id="btnSignUp">Cadastro</button><br>
+		<button id="btnLogOut" style="display: none;">Sair</button>
+	</div>
+
+	<script type="text/javascript" src="js/appAuth.js"></script>
+
+	<script type="text/javascript">
+		var db = firebase.firestore();
+
+		var citiesRef = db.collection("users");
+
+		// Atualizando dados
+
+		citiesRef.doc("teste").update({
+		    nome: "SF", idade: "Com sua permissão", country: "USA",
+		    capital: false, population: 1860000 });
+
+		/* Regra utilizada:
+
+		service cloud.firestore {
+  match /databases/{database}/documents {
+    // Make sure the uid of the requesting user matches the 'author_id' field
+    // of the document
+    match /users/{user} {
+      allow read, update, delete: if request.auth.uid == resource.data.author_id;
+      allow create, update: if request.auth.uid != null;
+      
+    }
+  }
+}
+
+*/ 
+
+	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+.user_name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .comments-list .media {
+            border-bottom: 1px dotted #ccc;
+        }
+        
+        .row-centered {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .col-centered {
+            display: inline-block;
+            float: none;
+            /* reset the text-align */
+            text-align: left;
+            /* inline-block space fix */
+            margin-right: -4px;
+        }
+        
+        @font-face {
+            font-family: 'googlebold';
+            src: url('fonts/GoogleSans-Bold.ttf');
+            font-style: normal;
+        }
+        
+        .img-circular {
+            width: 100px;
+            height: 100px;
+            /*background-image: url('img/rafael.jpg');*/
+            background-size: cover;
+            display: block;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            -webkit-border-top-left-radius: 50px;
+            -moz-border-top-left-radius: 50px;
+            -webkit-border-bottom-right-radius: 50px;
+            -moz-border-bottom-right-radius: 50px;
+            margin: 0 auto;
+        }
+        
+        .btn:focus {
+            box-shadow: 0 0 0 0;
+            border: 0 none;
+            outline: 0;
+        }
+        
+        .list-group a {
+            color: #900;
+        }
+        
+        #box {
+            /*definimos a largura do box*/
+            width: 100px;
+            /* definimos a altura do box */
+            height: 100px;
+            /* definimos a cor de fundo do box */
+            background-color: #666;
+            /* definimos o quão arredondado irá ficar nosso box */
+            border-radius: 10px;
+            margin: 3px;
+            float: left;
+        }

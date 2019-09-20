@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<script type="text/javascript" src="js/configFire.js"></script>
+<!--Dependencia de autentificação -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+
+
+	<title></title>
+</head>
+<body>
+
+	<h1>Cadastrar</h1>
+
+	Email: <input type="text" name="email" id="email"><br>
+	Senha: <input type="password" name="password" id="password"><br>
+	<button onclick="Cadastrar();">Cadastrar</button>
+
+
+
+<script type="text/javascript">
+
+	const email = "email@empresa.com";
+	const password = "1234";
+	
+firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+
+
+</script>
+
+</body>
+</html>

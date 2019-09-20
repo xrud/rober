@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- baseado em authDemo.html -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<script type="text/javascript" src="js/configFire.js"></script>
+<!--Dependencia de autentificação -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- spotify CSS 
+<link rel="stylesheet" type="text/css" href="style.css"> -->
+
+
+
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var paginaLogin = true;
+	</script>
+	<!-- Formulário -->
+	<center>
+		<div class="container">
+			<img src="logo.jpg" alt="logar" width="90px" height="120px"><br>
+			<input type="email" id="txtEmail" placeholder="email"><br>
+			<input type="password" id="txtPassword" placeholder="senha"><br>
+			<button id="btnLogin" class="btn btn-success" >Login</button><button id="btnSignUp">Cadastro</button><br>
+			<button id="btnLogOut" style="display: none;">Sair</button>
+		</div>
+	</center>
+
+	<script type="text/javascript" src="js/appAuth.js"></script>
+
+	<script type="text/javascript">
+		var db = firebase.firestore();
+
+		var citiesRef = db.collection("users");
+
+		// Atualizando dados
+
+		citiesRef.doc("teste").update({
+		    nome: "SF", idade: "Com sua permissão", country: "USA",
+		    capital: false, population: 1860000 });
+
+		/* Regra utilizada:
+
+		service cloud.firestore {
+  match /databases/{database}/documents {
+    // Make sure the uid of the requesting user matches the 'author_id' field
+    // of the document
+    match /users/{user} {
+      allow read, update, delete: if request.auth.uid == resource.data.author_id;
+      allow create, update: if request.auth.uid != null;
+      
+    }
+  }
+}
+
+*/ 
+
+	
+	</script>
+
+</body>
+</html>

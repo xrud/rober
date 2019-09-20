@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/material.indigo-pink.min.css">
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    <script type="text/javascript" src="../js/configFire.js">
+    </script>
+    <!--Dependencia de autentificação -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script type="text/javascript" src="../js/configFire.js"></script>
+    <script src="../js/xrud.js"></script>
+
+ 
+</head>
+<body>
+    <div id ="mycard">
+
+        <center>
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Comfirmação de dados<h2>
+            </div>
+            
+            
+            <div class="mdl-card__supporting-text">
+            
+                
+                <div id="name">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="nome" placeholder="Nome" required/>
+             
+            </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="desc" placeholder="Descrição">
+              
+            </div>
+                </div>
+                
+                <div id ="contact">
+                <div id="phone">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="contato" placeholder="Contato">
+              
+              
+            </div>
+                </div>
+  
+                <div id ="cepcadastro">
+                  <div id="phone">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="cep" placeholder="CEP">
+                
+                
+              </div>
+                  </div>
+                
+                 
+                </div>
+        
+            </div>   
+            
+            
+            
+          </div>
+          
+            <!-- FAB button with ripple -->
+            <div id="next">
+              <br>
+              <center><button onclick="cadastrar();" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored mdl-color--primary">cadastrar</button>
+              </center>
+              <p></p>
+            </div>
+          </div>
+        </center>
+        
+
+        <script>
+
+          var userDocument = localStorage.getItem('usuarioAtual');
+            
+            
+            function cadastrar(){
+              var txtNome  = document.getElementById('nome').value;
+                
+                if (txtNome != null) {
+                  var txtDescricao  = document.getElementById('desc').value;
+                  var txtContato  = document.getElementById('contato').value;
+                  var txtCEP  = document.getElementById('cep').value;
+
+                console.log(txtNome+txtDescricao+txtContato+txtCEP);
+                
+                      let dataSend = {
+                          nome: txtNome, descricao: txtDescricao, contato: txtContato,
+                          comoChegar: txtCEP, avaliacoes: "5", uid: userDocument };
+
+                          xrud_send('users', userDocument, dataSend);
+                          setTimeout(() => {
+                            window.location.href = "retorno.html";
+                          }, 500);
+                          var novato = localStorage.setItem('novato', false);
+                }
+                  }
+                
+			
+        </script>
+
+         <!-- Para refatorar: Prazo curto de projeto -->
+  <div style="display: none">
+      <button id="btnLogin" class="btn btn-success" >Login</button><button id="btnSignUp">Cadastro</button><br>
+      <button id="btnLogOut" style="display: none;">Sair</button>
+  </div>
+
+<script src="../js/appAuth.js"></script>
+</body>
+</html>

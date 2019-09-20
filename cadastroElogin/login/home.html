@@ -1,0 +1,26 @@
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Dependencias -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<script type="text/javascript" src="js/configFire.js"></script>
+<!--Dependencia de autentificação -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script type="text/javascript">
+  var paginaLogin = false;
+</script>
+
+
+  <div class="container" >
+    <input type="email" id="txtEmail" placeholder="email"><br>
+    <input type="password" id="txtPassword" placeholder="senha"><br>
+    <button id="btnLogin" >Login</button><button id="btnSignUp">Cadastro</button><br>
+    <button id="btnLogOut" >Sair</button>
+  </div>
+
+
+   <script type="text/javascript" src="js/appAuth.js"></script>
+  </html>
