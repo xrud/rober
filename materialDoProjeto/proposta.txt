@@ -1,0 +1,25 @@
+[10:01, 19/09/2019] Duff: Bom dia Fábio
+[10:01, 19/09/2019] Duff: Segue detalhamento da entrega do dia 29/09/2019
+[10:02, 19/09/2019] Duff: O que será entregue? Abaixo a lista de componentes
+[10:02, 19/09/2019] Duff: -> Cadastro e login de usuários
+-> GPS
+-> Google Maps integrado
+-> Banco virtual
+-> Tela de admin
+-> Cálculo de custo do cliente
+[10:03, 19/09/2019] Duff: O que farão esses componentes, e porque é tão importante que estejam entregues? Detalhamento abaixo
+[10:03, 19/09/2019] Duff: Esses componentes são as funcionalidades mínimas do aplicativos, e por serem componentes, não funcionaram em conjunto nesta primeira etapa
+[10:06, 19/09/2019] Duff: É importante estes componentes estarem prontos, para eventuais interrupções do projeto. Assim o dinheiro investido pelo detentor da ideia do aplicativo, é retornado em valor de produto. Estas interrupções podem variar, desde problemas de força maior do cliente, troca de desenvolvedor, problemas de saúde ou morte do desenvolvedor, processos de hiato no projeto, etc.
+[10:07, 19/09/2019] Duff: Estes componentes serão seguidos de breve documentação, instruindo cliente e desenvolvedor, como lidarem com ele.
+[10:07, 19/09/2019] Duff: Procedimento padrão em qualquer software de qualidade
+[10:08, 19/09/2019] Duff: O desenvolvimento do projeto inicia hoje, às 11 da manhã horário de Brasília.
+[10:09, 19/09/2019] Duff: Encerra aqui o detalhamento da entrega de componentes do dia 29. Alguma dúvida? Estou aqui para esclarecer qualquer dúvida
+
+[19:51, 20/09/2019] Fabio Workana: sttael@supertudo.com
+[19:51, 20/09/2019] Fabio Workana: facebook.com/obber.mobilidade
+
+https://www.aptetiroesportivo.com.br/
+
+http://cpanel.obber.com.br/
+Usuário obbercom
+Senha obber2019
