@@ -1,0 +1,76 @@
+
+    	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<script src="../js/json2html.js"></script>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script type="text/javascript" src="../js/configFire.js"></script>
+
+    
+    <div id="output"></div>
+
+    <script src="../js/xrud.js"></script>
+    <script>
+
+    var lineCode = []; //Stores HTML code for front end
+    const limitPage = 10; // Limits the number of records added to the page.
+    var countView = 0; // Set item count
+    var imgOff = [];
+
+
+
+    
+     function xrud_miniController($content) { // Set the data that will go to the view.
+        
+        // Pegando uid do json recebido
+        let consoleType = typeof($content);
+        console.log("Resultado"+consoleType);
+        consoleType = JSON.parse($content);
+        var uidLocal = consoleType.uid;
+
+        // Preparando caminho para imagem
+        let serverImagem = "http://mogifotos.atwebpages.com";
+        var captureUid = uidLocal;
+        var caminhoImgPro = serverImagem+'/uploads/'+captureUid+'.ttt';
+
+
+        let html = json2html.transform($content, {
+            '<>': 'h3',
+            'html': '${autor}'
+        });
+        let paramErro = "'"+captureUid+"'";
+        let html2 = html + '<img src="'+caminhoImgPro+'" class="img-circular" id="'+uidLocal+'" onerror="myfunction('+paramErro+');" width="50px" height="50px" style="border-radius: 100%"><i>..."'+json2html.transform($content, {
+            '<>': 'span',
+            'html': '${comentario}'
+        }) + '"</i><hr>';
+        lineCode.push(html2);
+        window.document.getElementById("xrud_ID_"+countView).innerHTML = lineCode[countView];
+        countView++;
+        console.log("Log falha: "+imgOff);
+
+    }
+
+
+    function loadMiniView() {
+        for (var i = 0; i < limitPage; i++) {
+
+            var currentCode = window.document.getElementById('output').innerHTML;
+
+            window.document.getElementById('output').innerHTML = currentCode + "<div id='xrud_ID_" + i + "'></div>";
+        }
+    }
+
+    
+    
+    loadMiniView();
+    xrud_search('comentarios', 'nome', 'Apple');
+
+     function myfunction($id){
+        console.log('falha no carregamento', $id);
+        window.document.getElementById($id).src = "../img/abertura.png";
+    }
+    
+</script>
+
+</html>
