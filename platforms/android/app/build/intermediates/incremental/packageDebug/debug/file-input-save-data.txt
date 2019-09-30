@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Sep 30 12:06:20 UTC 2019
+#Mon Sep 30 12:35:13 UTC 2019
 25.file=/obber/platforms/android/app/build/intermediates/assets/debug/www/central.html
 41.base=/obber/platforms/android/app/build/intermediates/assets/debug
 25.base=/obber/platforms/android/app/build/intermediates/assets/debug
