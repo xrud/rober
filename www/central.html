@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+        if (self != top) {
+            top.location.replace(window.location.href)
+        }
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <title>Obber app</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style3.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/half-slider.css" rel="stylesheet">
+
+    <!-- Dependências back-end -->
+    <!-- baseado em authDemo.html -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    <script type="text/javascript" src="js/configFire.js">
+    </script>
+    <!--Dependencia de autentificação -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script type="text/javascript">
+        var paginaLogin = false;
+    </script>
+
+    <!-- Comentarios CSS -->
+
+    <link rel="stylesheet" type="text/css" href="css/central-page.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+
+            <div class="sidebar-header" style="margin-top:50px;text-align:center;">
+                <h3 style="color:#900;font-family:'googlebold',arial,sans-serif;">Obber</h3>
+            </div>
+
+            <ul class="list-group">
+                
+                <p class="text-secondary" style="text-align:center;"><a href="#" onclick="sairDoSistema();">Sair / </a>
+
+                <li>
+                    <!--<a href="barmenuv4.html">Bar</a>-->
+                </li>
+                <li>
+                    <a href="index.html">Página Inicial</a>
+                </li>
+                <li>
+                    <a href="app.html?pagina=gpsTest">Mostrar coordenadas</a>
+                </li>
+                <li>
+                    <a href="app.html?pagina=mapaTest">Mostrar mapa</a>
+                </li>
+                <li>
+                    <a href="app.html?pagina=calculaDistancia">Calcular distância entre coordenadas</a>
+                </li>
+
+                <li>
+                    <a href="https://console.firebase.google.com">Administrar contas</a>
+                </li>
+
+               <title>Obber app</title>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+                <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #900;">
+                    <span style="float:left;">
+                        <button type="button" id="sidebarCollapse" class="btn btn-default" style="background-color: #900;">
+                            <i class="fas fa-align-justify fa-lg" style="color:white;"></i>                                 
+                        </button>
+                        <span class="navbar-text" style="color: white;margin-left:40px;font-family: 'googlebold',arial,sans-serif;font-size:18px;">Obber app</span>
+                    </span>
+
+                </nav>
+
+                <div class="row row-centered">
+                    <div class="col-lg-12" style="padding:10px;margin-top: 50px; ">
+                        <img src="img/abertura.png" alt="Obber" >
+                    </div>
+                </div>
+
+           
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="container">
+
+                        <div class="col-lg-12" align="center" style="margin-top: 15px;">
+
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    </script>
+    <script src="js/app.js"></script>
+
+    <script type="text/javascript" src="js/app-page.js">
+    </script>
+
+    <div style="display: none">
+        <button id="btnLogin" class="btn btn-success">Login</button>
+        <button id="btnSignUp">Cadastro</button>
+        <br>
+        <button id="btnLogOut" style="display: none;">Sair</button>
+    </div>
+
+    <script src="js/appAuth.js"></script>
+
+    <div style="background-color: black; z-index: 9998; width: 100%; height: 100%; position: fixed; top: 0px; opacity: 0.6; 
+    display: none;
+    ">
+        <div style="z-index: 9999; position: relative; width: 85%; height: 85%; top: 7.5%; left: 7.5%; background-color: white; opacity: 1.0;">
+
+        </div>
+    </div>
+    <script type="text/javascript">
+    	var userPage = localStorage.getItem('usuarioAtual');
+    	console.log("DEtectado: "+userPage);
+
+    	if (userPage == '61xqDOqMi2ZIhtAk37SwBBZtyGr2') { // Não consegui colocar duas regras no banco ao mesmo tempo. Foi mal!
+    		window.document.getElementById('adminTelas').style.display = "block";
+    	}
+    </script>
+
+</body>
+
+</html>
