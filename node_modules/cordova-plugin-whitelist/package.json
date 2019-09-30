@@ -2,7 +2,7 @@
   "_args": [
     [
       "cordova-plugin-whitelist@1",
-      "/obber"
+      "/marketrud/package/meradinhodelivery"
     ]
   ],
   "_from": "cordova-plugin-whitelist@>=1.0.0 <2.0.0",
@@ -38,7 +38,7 @@
   "_shasum": "31938545c7c3e7de35c20ab08c2c3afa06e8a3f9",
   "_shrinkwrap": null,
   "_spec": "cordova-plugin-whitelist@1",
-  "_where": "/obber",
+  "_where": "/marketrud/package/meradinhodelivery",
   "author": {
     "name": "Apache Software Foundation"
   },
