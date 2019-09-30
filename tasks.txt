@@ -1,0 +1,15 @@
+* Extrair função de coordenada para carregar na página
+-> Verifiar código
+-> Tentar executar sem ação de botão
+- Se falhar, pesquisar uso da API HTML5 para localizção
+- Se deu certo, criar pasta no projeto para chamada de funções
+- chamar função em iframe
+* Criar serviços de medida de distância de coordenadas
+-> Logar e criar pasta na awardspace
+-> Criar formulário para envio de cordenadas, transformando em um serviço
+- Se deu certo, criar chamada de página em pasta do projeto
+* Verificar novas informações de pagamento para googlemaps
+-> Executar página de busca de endereço por coordenadas
+-> Copiar e colar resultado do termo referente a informações de pagamento
+- Se der errado, pesquisar sobre formas alternativas ao googleMaps e informar cliente do ocorrido
+- Se der certo, o de sempre

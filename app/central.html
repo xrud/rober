@@ -62,14 +62,12 @@
         <nav id="sidebar">
 
             <div class="sidebar-header" style="margin-top:50px;text-align:center;">
-                <h3 style="color:#900;font-family:'googlebold',arial,sans-serif;"></h3>
-                <img src="img/abertura.png" height="60%" width="60%">
+                <h3 style="color:#900;font-family:'googlebold',arial,sans-serif;">Obber</h3>
             </div>
 
             <ul class="list-group">
-                <div class="img-circular" id="selectBox"></div>
-                <p class="text-secondary" style="text-align:center;"><a href="#" onclick="sairDoSistema();">Sair </a>
-                    <!--<a href="app.html?pagina=trocarFoto">Trocar foto</a></p>-->
+                
+                <p class="text-secondary" style="text-align:center;"><a href="#" onclick="sairDoSistema();">Sair / </a>
 
                 <li>
                     <!--<a href="barmenuv4.html">Bar</a>-->
@@ -77,8 +75,21 @@
                 <li>
                     <a href="index.html">Página Inicial</a>
                 </li>
+                <li>
+                    <a href="app.html?pagina=gpsTest">Mostrar coordenadas</a>
+                </li>
+                <li>
+                    <a href="app.html?pagina=mapaTest">Mostrar mapa</a>
+                </li>
+                <li>
+                    <a href="app.html?pagina=calculaDistancia">Calcular distância entre coordenadas</a>
+                </li>
+
+                <li>
+                    <a href="https://console.firebase.google.com">Administrar contas</a>
+                </li>
+
                <title>Obber app</title>
-                </div>
             </ul>
 
         </nav>
@@ -86,127 +97,23 @@
         <!-- Page Content  -->
         <div id="content">
 
-            <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #900;">
-                <span style="float:left;">
-                    <button type="button" id="sidebarCollapse" class="btn btn-default" style="background-color: #900;">
-                        <i class="fas fa-align-justify fa-lg" style="color:white;"></i>                                 
-                    </button>
-                    <span class="navbar-text" style="color: white;margin-left:40px;font-family: 'googlebold',arial,sans-serif;font-size:18px;">Obber app</span>
-                </span>
+                <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #900;">
+                    <span style="float:left;">
+                        <button type="button" id="sidebarCollapse" class="btn btn-default" style="background-color: #900;">
+                            <i class="fas fa-align-justify fa-lg" style="color:white;"></i>                                 
+                        </button>
+                        <span class="navbar-text" style="color: white;margin-left:40px;font-family: 'googlebold',arial,sans-serif;font-size:18px;">Obber app</span>
+                    </span>
 
-            </nav>
+                </nav>
 
-            <div class="row row-centered">
-                <div class="col-lg-12" style="padding:10px;margin-top: 50px; ">
-                    <img src="img/GG_Logo5.jpg" alt="Guia Gourmet" height="200" width="200">
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-lg-12">
-                    <div class="input-group col-md-4">
-                        <input class="form-control py-2" type="search" placeholder="Buscar..." id="myInput" name="myCountry">
-                        <span class="input-group-append">
-                                <button class="btn btn-flat" type="button" onclick="pesquisar();">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
+                <div class="row row-centered">
+                    <div class="col-lg-12" style="padding:10px;margin-top: 50px; ">
+                        <img src="img/abertura.png" alt="Obber" >
                     </div>
                 </div>
-                <!-- Autocomplete dependências -->
-                <script type="text/javascript" src="js/xrud.js"></script>
-                <script type="text/javascript" src="js/autoCompleteDIP.js"></script>
-                <script type="text/javascript" src="js/autoCompleteApp.js"></script>
-                <link rel="stylesheet" type="text/css" href="css/autoComplete.css">
-                <script type="text/javascript">
-                    autocomplete(document.getElementById("myInput"), autoCompleteDIP);
-                </script>
-                <script type="text/javascript">
-                    function pesquisar() {
-                        var palavraChave = window.document.getElementById('myInput').value;
-                        localStorage.setItem('infoEmpresa', palavraChave)
-                        setTimeout(() => {
-                            window.location.href = "app.html?pagina=info"
-                        }, 500);
 
-                    }
-                </script>
-                <!-- fim de Autocomplete dependências -->
-
-                <!-- Indo para categorias -->
-
-                <script type="text/javascript">
-                    function pesquisarCategoria($categoria) {
-                        localStorage.setItem('categoria', $categoria)
-                        setTimeout(() => {
-                            window.location.href = "categoria.html"
-                        }, 500);
-
-                    }
-                </script>
-
-            </div>
-
-            <div class="row row-centered">
-                <div class="col-lg-12" style="padding:10px; ">
-                    <h5 style="color:#900;font-family:'googleregular',arial,sans-serif;">Categorias</h5>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <div id="box" onclick="pesquisarCategoria('bar');">
-                        <div style="height:50px;text-align: center;margin-top:10px"><i class="fas fa-glass-martini fa-4x"></i></div>
-                        <div style="height:50px;text-align: center;line-height: 50px;font-family:'googleregular',arial,sans-serif;font-size:12px;">Bares</div>
-                    </div>
-
-                    <div id="box" onclick="pesquisarCategoria('restaurante');">
-                        <div style="height:50px;text-align: center;margin-top:10px"><i class="fas fa-utensils fa-4x"></i></i>
-                        </div>
-                        <div style="height:50px;text-align: center;line-height: 50px;font-family:'googleregular',arial,sans-serif;font-size:12px;">Restaurantes</div>
-                    </div>
-
-                    <div id="box" onclick="pesquisarCategoria('bar');">
-                        <div style="height:50px;text-align: center;margin-top:10px"><i class="fas fa-glass-martini fa-4x"></i></div>
-                        <div style="height:50px;text-align: center;line-height: 50px;font-family:'googleregular',arial,sans-serif;font-size:12px;">Bares</div>
-                    </div>
-
-                    <div id="box" onclick="pesquisarCategoria('restaurante');">
-                        <div style="height:50px;text-align: center;margin-top:10px"><i class="fas fa-utensils fa-4x"></i></i>
-                        </div>
-                        <div style="height:50px;text-align: center;line-height: 50px;font-family:'googleregular',arial,sans-serif;font-size:12px;">Restaurantes</div>
-                    </div>
-
-                    <div id="box" onclick="pesquisarCategoria('bar');">
-                        <div style="height:50px;text-align: center;margin-top:10px"><i class="fas fa-glass-martini fa-4x"></i></div>
-                        <div style="height:50px;text-align: center;line-height: 50px;font-family:'googleregular',arial,sans-serif;font-size:12px;">Bares</div>
-                    </div>
-
-                    <div id="box" onclick="pesquisarCategoria('restaurante');">
-                        <div style="height:50px;text-align: center;margin-top:10px"><i class="fas fa-utensils fa-4x"></i></i>
-                        </div>
-                        <div style="height:50px;text-align: center;line-height: 50px;font-family:'googleregular',arial,sans-serif;font-size:12px;">Restaurantes</div>
-                    </div>
-
-                    <div id="box" onclick="pesquisarCategoria('bar');">
-                        <div style="height:50px;text-align: center;margin-top:10px"><i class="fas fa-glass-martini fa-4x"></i></div>
-                        <div style="height:50px;text-align: center;line-height: 50px;font-family:'googleregular',arial,sans-serif;font-size:12px;">Bares</div>
-                    </div>
-
-                    <div id="box" onclick="pesquisarCategoria('restaurante');">
-                        <div style="height:50px;text-align: center;margin-top:10px"><i class="fas fa-utensils fa-4x"></i></i>
-                        </div>
-                        <div style="height:50px;text-align: center;line-height: 50px;font-family:'googleregular',arial,sans-serif;font-size:12px;">Restaurantes</div>
-                    </div>
-
-                    <div id="box" onclick="pesquisarCategoria('bar');">
-                        <div style="height:50px;text-align: center;margin-top:10px"><i class="fas fa-glass-martini fa-4x"></i></div>
-                        <div style="height:50px;text-align: center;line-height: 50px;font-family:'googleregular',arial,sans-serif;font-size:12px;">Bares</div>
-                    </div>
-
-                </div>
+           
             </div>
 
             <!-- Footer -->
@@ -236,7 +143,7 @@
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     </script>
-    <!--<script src="js/app.js"></script>-->
+    <script src="js/app.js"></script>
 
     <script type="text/javascript" src="js/app-page.js">
     </script>

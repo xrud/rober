@@ -16,7 +16,12 @@ $dist1 = $dist1 * 6371;
 return number_format($dist1, 2, '.', '');
 }
 
-echo distancia2(-12.9813346,-38.4653612, -12.9741491,-38.4696483) . " Km<br />";
+$l1 = '-12.981334';
+$l2 = '-38.4653612';
+$l3 = '-12.9741491';
+$l4 = '-38.4696483';
+
+echo "A distância entre ($l1, $l2) e ($l3, $l4) é de <b>".distancia2($l1, $l2, $l3, $l4) . " Km<b/>";
 
 
 
