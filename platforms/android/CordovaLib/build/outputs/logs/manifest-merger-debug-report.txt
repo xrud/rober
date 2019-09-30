@@ -1,27 +1,27 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
-INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
-INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
-INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
-INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
-INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
-INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
+ADDED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
+INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
+INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
+INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
+INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
+INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
+INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:20:1-23:12
 	package
-		ADDED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:21:7-35
-		INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml
-		INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml
+		ADDED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:21:7-35
+		INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml
+		INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml
 	android:versionName
-		ADDED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:21:36-61
-		INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml
-		INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml
+		ADDED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:21:36-61
+		INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml
+		INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml
 	xmlns:android
-		ADDED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:20:11-69
+		ADDED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:20:11-69
 	android:versionCode
-		ADDED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:21:62-85
-		INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml
-		INJECTED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml
+		ADDED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:21:62-85
+		INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml
+		INJECTED from /rober/platforms/android/CordovaLib/AndroidManifest.xml
 uses-sdk
-ADDED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:22:5-44
+ADDED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:22:5-44
 	android:minSdkVersion
-		ADDED from /marketrud/package/meradinhodelivery/platforms/android/CordovaLib/AndroidManifest.xml:22:15-41
+		ADDED from /rober/platforms/android/CordovaLib/AndroidManifest.xml:22:15-41

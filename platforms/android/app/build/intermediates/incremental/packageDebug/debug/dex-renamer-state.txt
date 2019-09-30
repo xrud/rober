@@ -1,4 +1,4 @@
-#Sat Sep 14 13:30:43 UTC 2019
-base.0=/marketrud/package/meradinhodelivery/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Mon Sep 30 12:55:10 UTC 2019
+base.0=/rober/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
-file.0=/marketrud/package/meradinhodelivery/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
+file.0=/rober/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
